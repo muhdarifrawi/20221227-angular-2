@@ -13,3 +13,146 @@
 <ng-template #val2>
     <p style="background-color: orange;color:white;">This is the error message</p>
 </ng-template>
+
+<h2 *ngFor="let key of obj">{{key.name}}</h2>
+
+<h2>These are their names:</h2>
+<ul>
+    <li *ngFor="let key of obj">{{key.name}}</li>
+</ul>
+
+<h2>These are their names again:</h2>
+<ul>
+    <li *ngFor="let key of obj; index as i; first as f; last as l; odd as o;even as e;">
+        {{i}} {{key.number}} {{key.name}}
+        <span *ngIf="f" style="background-color:burlywood">This is the first element</span>
+        <span *ngIf="l" style="background-color:aquamarine">This is the last element</span>
+        <span *ngIf="o" style="background-color: red;">Odd element</span>
+        <span *ngIf="e" style="background-color: blue;">Even element</span>
+    </li>
+</ul>
+
+<h2>These are their names yet again:</h2>
+<ul *ngFor="let key of obj;odd as o;even as e;">
+    <li *ngIf="o" style="background-color: red;color:white;" >
+        {{key.number}} {{key.name}}
+    </li>
+    <li *ngIf="e" style="background-color: blue;color:white;" >
+        {{key.number}} {{key.name}}
+    </li>
+</ul>
+
+<h2>These are their names yet again again:</h2>
+<ul >
+    <li *ngFor="let key of obj;odd as o;even as e;">
+        <div *ngIf="o" style="background-color: red;color:white;" >
+            {{key.number}} {{key.name}}
+        </div>
+        <div *ngIf="e" style="background-color: blue;color:white;" >
+            {{key.number}} {{key.name}}
+        </div>
+    </li>
+</ul>
+<h1>Switch:</h1>
+<div [ngSwitch]="game">
+    <div *ngSwitchCase="'cricket'">He plays cricket</div>
+    <div *ngSwitchCase="'rugby'">He plays rugby</div>
+    <div *ngSwitchCase="'football'">He plays football</div>
+    <div *ngSwitchCase="'baseball'">He plays baseball</div>
+    <div *ngSwitchCase="'basketball'">He plays basketball</div>
+    <div *ngSwitchDefault>He plays what he likes</div>
+</div>
+
+<h1 [ngStyle]="{'color':c,'background-color':bg,'font-weight':fw}">
+    This is a styling element
+</h1>
+
+<h1 [ngStyle]="{'color':colorVal === 1 ? 'red':'green'}">
+    This is another styling element
+</h1>
+
+<h1 [ngClass]="'a b'">
+    This is a class styling element
+</h1>
+
+<h1 [ngClass]=classVal>
+    This is a class styling element
+</h1>
+
+<h1 [ngClass]="classCompare === 1 ? 'b':'a'">
+    This is a class styling element
+</h1>
+
+<h1 [ngClass]="classCompare === 1 ? classA:classB">
+    This is a class styling element
+</h1>
+
+<h1 [ngClass]="{a:true, b:true}">
+    This is a class styling element
+</h1>
+
+<h1 [ngClass]=classType()>
+    This is a class styling element with function
+</h1>
+
+<h2>{{classA}}</h2>
+
+<table>
+    <tr [title]="headerRow">
+        <th>
+            Number
+        </th>
+        <th>
+            Name
+        </th>
+        <th>
+            Age
+        </th>
+    </tr>
+    <tr *ngFor="let key of obj">
+        <td>
+            {{key.number}}
+        </td>
+        <td>
+            {{key.name}}
+        </td>
+        <td>
+            {{key.age}}
+        </td>
+    </tr>
+</table>
+
+<table>
+    <tr [title]="headerRow">
+        <th [attr.colspan]=colSpan>
+            Number
+        </th>
+        <th>
+            Name
+        </th>
+        <th>
+            Age
+        </th>
+    </tr>
+    <tr *ngFor="let key of obj">
+        <td>
+            {{key.number}}
+        </td>
+        <td>
+            {{key.name}}
+        </td>
+        <td>
+            {{key.age}}
+        </td>
+    </tr>
+</table>
+
+<img [src]=imgSrc [alt]=imgAlt>
+
+<h2 [style.color]="'red'">Style binding here</h2>
+<h2 [attr.title]=headerRow>attribute biding here</h2>
+
+<button (click)=actionCall()>Click</button><br>
+<button (click)=withParams(1,2,3)>pass params</button><br>
+<span (mouseover)=actionCall()>Mouseover on me</span><br>
+<input type="text" name="input-demo" id="input-demo" (keypress)=actionCall()>

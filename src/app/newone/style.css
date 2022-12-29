@@ -1,3 +1,16 @@
 h2{
     color:orangered;
 }
+
+.a{
+    color:violet;
+}
+
+.b{
+    background-color: aquamarine;
+}
+
+table, td,th{
+    border: 1px blue solid;
+    border-collapse:collapse;
+}
