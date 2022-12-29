@@ -1,0 +1,15 @@
+<p>newone works!</p>
+<h2>this is newone</h2>
+<button mat-raised-button>Basic</button>
+<button mat-raised-button color="primary">Primary</button>
+<button mat-icon-button color="warn" aria-label="Example icon button with a heart icon">
+    <mat-icon>favorite</mat-icon>
+</button>
+
+<h2 *ngIf="true">This is something</h2>
+
+<h2 *ngIf="val;else val2">This is something again controlled by val</h2>
+
+<ng-template #val2>
+    <p style="background-color: orange;color:white;">This is the error message</p>
+</ng-template>
