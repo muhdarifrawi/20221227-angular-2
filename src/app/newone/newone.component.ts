@@ -60,4 +60,8 @@ export class NewoneComponent {
   withParams(a:any, b:any, c:any){
     alert("here are the results:" + a +", "+ b +", "+ c)
   }
+
+  customeDate = new Date(2022, 3, 15); //month is zero based
+
+  randomNumber = 20
 }

@@ -156,3 +156,16 @@
 <button (click)=withParams(1,2,3)>pass params</button><br>
 <span (mouseover)=actionCall()>Mouseover on me</span><br>
 <input type="text" name="input-demo" id="input-demo" (keypress)=actionCall()>
+
+<h1>Pipes</h1>
+<p>{{game}}</p>
+<p>{{game | uppercase}}</p>
+<p>{{customeDate | date}}</p>
+<p>{{customeDate | date : "long"}}</p>
+<p>{{customeDate | date : "short"}}</p>
+<p>{{customeDate | date : "dd-MM-yyyy"}}</p>
+<p>{{customeDate | date : "dd/MMM/yyyy"}}</p>
+<p>{{randomNumber | percent}}</p>
+<p>{{randomNumber | currency}}</p>
+<p>{{randomNumber | currency : "CAD"}}</p>
+<p>{{obj | json}}</p>
