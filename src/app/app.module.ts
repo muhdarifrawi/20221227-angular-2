@@ -10,12 +10,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
+import { NewthreeComponent } from './newthree/newthree.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NewoneComponent,
-    NewtwoComponent
+    NewtwoComponent,
+    NewthreeComponent
   ],
   imports: [
     BrowserModule,

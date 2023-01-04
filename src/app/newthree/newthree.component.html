@@ -1,0 +1,49 @@
+<p>newthree works!</p>
+
+<h1>Routing with paramters</h1>
+<p>first value: {{val}}</p>
+<p>second value: {{val2}}</p>
+
+<h1>Routing Links</h1>
+<table>
+    <tr [title]="headerRow">
+        <th>
+            Number
+        </th>
+        <th>
+            Name
+        </th>
+        <th>
+            Age
+        </th>
+        <th>
+            Links
+        </th>
+        <th>
+            Links 2
+        </th>
+    </tr>
+    <tr *ngFor="let key of obj">
+        <td>
+            {{key.number}}
+        </td>
+        <td>
+            {{key.name}}
+        </td>
+        <td>
+            {{key.age}}
+        </td>
+        <td>
+            <!-- will start from base url '/' (without the route name) -->
+            <a [routerLink]="['/links',key.number,'edit']">Edit</a> 
+            | 
+            <a [routerLink]="['/links',key.number,'delete']">Delete</a>
+        </td>
+        <td>
+            <!-- will include the current url -->
+            <a [routerLink]="['links',key.number,'edit']">Edit</a> 
+            | 
+            <a [routerLink]="['links',key.number,'delete']">Delete</a>
+        </td>
+    </tr>
+</table>
