@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { NewoneComponent } from './newone/newone.component';
 import { NewtwoComponent } from './newtwo/newtwo.component';
 import { NewthreeComponent } from './newthree/newthree.component';
+import { NewfourComponent } from './newfour/newfour.component';
 
 const routes: Routes = [
   {
@@ -22,6 +23,10 @@ const routes: Routes = [
     path:"",
     redirectTo:"newtwo",
     pathMatch:"full"
+  },
+  {
+    path:"newfour",
+    component:NewfourComponent
   }
 ];
 
