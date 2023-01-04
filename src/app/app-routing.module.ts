@@ -6,12 +6,13 @@ import { NewthreeComponent } from './newthree/newthree.component';
 import { NewfourComponent } from './newfour/newfour.component';
 import { ErrorcomponentComponent } from './errorcomponent/errorcomponent.component';
 import { RouteGuard1Guard } from './route-guard-1.guard';
+import { RouteGuard2Guard } from './route-guard-2.guard';
 
 const routes: Routes = [
   {
     path: "newone",
     component: NewoneComponent,
-    canActivate:[RouteGuard1Guard]
+    canActivate:[RouteGuard1Guard,RouteGuard2Guard]
   },
   {
     path: "newtwo",
