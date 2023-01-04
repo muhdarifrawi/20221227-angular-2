@@ -5,12 +5,13 @@ import { NewtwoComponent } from './newtwo/newtwo.component';
 import { NewthreeComponent } from './newthree/newthree.component';
 import { NewfourComponent } from './newfour/newfour.component';
 import { ErrorcomponentComponent } from './errorcomponent/errorcomponent.component';
+import { RouteGuard1Guard } from './route-guard-1.guard';
 
 const routes: Routes = [
   {
     path: "newone",
     component: NewoneComponent,
-    // outlet:"routeone"
+    canActivate:[RouteGuard1Guard]
   },
   {
     path: "newtwo",
