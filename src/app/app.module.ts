@@ -12,6 +12,7 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
 import { NewthreeComponent } from './newthree/newthree.component';
 import { NewfourComponent } from './newfour/newfour.component';
+import { ErrorcomponentComponent } from './errorcomponent/errorcomponent.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { NewfourComponent } from './newfour/newfour.component';
     NewoneComponent,
     NewtwoComponent,
     NewthreeComponent,
-    NewfourComponent
+    NewfourComponent,
+    ErrorcomponentComponent
   ],
   imports: [
     BrowserModule,
